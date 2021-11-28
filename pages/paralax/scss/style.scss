@@ -1,0 +1,73 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    color: #1d1d1d;
+}
+.page{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.parallax{
+    position: relative;
+    height: 100%;
+    &__montain{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+    &__montain_1{
+        background-image: url(../images/m_1.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    &__montain_2{
+        z-index: 1;
+        background-image: url(../images/m_2.png);
+        background-repeat: no-repeat;
+        background-size: 45%;
+        background-position: bottom right;
+    }
+    &__montain_3{
+        z-index: 1;
+        background-image: url(../images/m_3.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: bottom left;
+    }
+    &__fog{
+        background-image: url(../images/fog_1.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: bottom;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+    }
+}
+
+.content{
+    position: relative;
+    &__body{
+        max-width: 1170px;
+        margin: 0 auto;
+    }
+    &__title{
+        text-align: center;
+        font-weight: 800;
+        font-size: 100px;
+        margin-bottom: 50px;
+        text-transform: uppercase;
+    }
+    &__article{
+        padding: 20px 20px 200px;
+        background-color: rgb(247, 247, 247);
+        color: #222222;
+    }
+}

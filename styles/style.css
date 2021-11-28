@@ -1,0 +1,63 @@
+.wrapper {
+  width          : 100vw;
+  height         : 100vh;
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+  overflow       : hidden;
+}
+
+.list {
+  position     : relative;
+  width        : 400px;
+  height       : 400px;
+  border-radius: 50%;
+  transition   : .5s;
+}
+
+.item {
+  overflow        : hidden;
+  position        : absolute;
+  top             : 0;
+  right           : 0;
+  width           : 50%;
+  height          : 50%;
+  transform-origin: 0% 100%;
+  transition      : .3s;
+}
+
+.item-body {
+  position     : absolute;
+  left         : -100%;
+  width        : 200%;
+  height       : 200%;
+  border-radius: 50%;
+  border       : 5px solid rgb(77, 77, 77);
+  color        : rgb(170, 170, 170);
+  font-size    : 18px;
+  transition   : .3s;
+}
+
+.item.active .item-body {
+  border-color    : rgb(20, 20, 20);
+  background-color: rgb(238, 238, 238);
+  color           : rgb(68, 68, 68);
+}
+
+.title {
+  display       : block;
+  width         : 200px;
+  text-align    : center;
+  font-weight   : 600;
+  position      : absolute;
+  top           : 90px;
+  right         : 0px;
+  transform     : rotate(45deg);
+  pointer-events: none;
+}
+
+.item-body:hover {
+  border-color    : rgb(43, 43, 43);
+  background-color: rgb(245, 245, 245);
+  color           : rgb(109, 109, 109);
+}
