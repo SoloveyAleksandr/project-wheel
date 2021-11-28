@@ -1,25 +1,25 @@
-const works = [
-  {
-    title: 'expoforum',
-    url: './pages/expoforum',
-    deg: -90,
-  },
-  {
-    title: 'logoipsome',
-    url: './pages/logoipsome',
-    deg: 180,
-  },
-  {
-    title: 'mob-first',
-    url: './pages/mob-first',
-    deg: 90,
-  },
-  {
-    title: 'paralax',
-    url: './pages/paralax',
-    deg: 0,
-  },
-];
+// const works = [
+//   {
+//     title: 'Expoforum',
+//     url: './pages/expoforum',
+//     deg: -90,
+//   },
+//   {
+//     title: 'Logoipsome',
+//     url: './pages/logoipsome',
+//     deg: 180,
+//   },
+//   {
+//     title: 'Mobile first',
+//     url: './pages/mob-first',
+//     deg: 90,
+//   },
+//   {
+//     title: 'Design firm',
+//     url: 'https://soloveyaleksandr.github.io/design-firm/',
+//     deg: 0,
+//   },
+// ];
 
 function removeClass() {
   const items = document.getElementsByClassName('item');
@@ -35,7 +35,10 @@ window.addEventListener('click', (e) => {
   }
 });
 
-function render() {
+async function render() {
+  const request = await fetch('./API/works.json');
+  const works = await request.json();
+
   const list = document.querySelector('.list');
   const docFragment = document.createDocumentFragment();
 
@@ -45,7 +48,7 @@ function render() {
     const item = document.createElement('li');
     item.innerHTML = `
       <div class="item-body">
-        <span class="title">${el.title}</span>
+        <span class="item-title">${el.title}</span>
       </div>
     `
 

@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Expoforum",
+    "url": "./pages/expoforum",
+    "deg": -90
+  },
+  {
+    "title": "Logoipsome",
+    "url": "./pages/logoipsome",
+    "deg": 180
+  },
+  {
+    "title": "Mobile first",
+    "url": "./pages/mob-first",
+    "deg": 90
+  },
+  {
+    "title": "Design firm",
+    "url": "https://soloveyaleksandr.github.io/design-firm/",
+    "deg": 0
+  }
+]
