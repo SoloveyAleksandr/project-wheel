@@ -76,11 +76,11 @@ body {
   position      : relative;
   z-index       : 2;
   text-align    : center;
-  margin-bottom : 20px;
+  margin-bottom : 2rem;
   transition    : .5s;
   opacity       : 0;
   pointer-events: none;
-  height        : 5.35rem
+  height        : 5.5rem
 }
 
 .info.active {
@@ -133,6 +133,7 @@ body {
   opacity       : 1;
   pointer-events: all;
   transition    : .5s;
+  text-align    : center;
 }
 
 .manual.notActive {
