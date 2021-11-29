@@ -2,21 +2,25 @@
   {
     "title": "Expoforum",
     "url": "./pages/expoforum",
-    "deg": -90
+    "deg": -90,
+    "description": "Адаптивная верстка сайта выстовочного комплекса"
   },
   {
     "title": "Logoipsome",
     "url": "./pages/logoipsome",
-    "deg": 180
-  },
-  {
-    "title": "Mobile first",
-    "url": "./pages/mob-first",
-    "deg": 90
+    "deg": 180,
+    "description": "Адаптивная верстка сайта автосервиса с интересным дизайном"
   },
   {
     "title": "Design firm",
     "url": "https://soloveyaleksandr.github.io/design-firm/",
-    "deg": 0
+    "deg": 90,
+    "description": "Mobile first верстка сайта дизайнерского агенства"
+  },
+  {
+    "title": "Minimalistic",
+    "url": "https://soloveyaleksandr.github.io/minimalStack/",
+    "deg": 0,
+    "description": "Верстка и разработка моей странички-визитки"
   }
 ]

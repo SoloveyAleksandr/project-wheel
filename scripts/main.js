@@ -1,25 +1,12 @@
-// const works = [
-//   {
-//     title: 'Expoforum',
-//     url: './pages/expoforum',
-//     deg: -90,
-//   },
-//   {
-//     title: 'Logoipsome',
-//     url: './pages/logoipsome',
-//     deg: 180,
-//   },
-//   {
-//     title: 'Mobile first',
-//     url: './pages/mob-first',
-//     deg: 90,
-//   },
-//   {
-//     title: 'Design firm',
-//     url: 'https://soloveyaleksandr.github.io/design-firm/',
-//     deg: 0,
-//   },
-// ];
+window.addEventListener('click', (e) => {
+  const target = e.target;
+  if (!target.classList.contains('item') &&
+    !target.classList.contains('item-body') &&
+    !target.classList.contains('info-btn')) {
+    removeClass();
+    renderInfo();
+  }
+});
 
 function removeClass() {
   const items = document.getElementsByClassName('item');
@@ -28,12 +15,27 @@ function removeClass() {
   }
 }
 
-window.addEventListener('click', (e) => {
-  const target = e.target;
-  if (!target.classList.contains('item') && !target.classList.contains('item-body')) {
-    removeClass();
+function renderInfo(obj = null) {
+  const info = document.querySelector('.info');
+  const manual = document.querySelector('.manual');
+  info.classList.remove('active');
+  if (obj) {
+    // setTimeout(() => {
+    const infoTitle = document.querySelector('.info-title');
+    const infoDescription = document.querySelector('.info-description');
+    const infoBtn = document.querySelector('.info-btn');
+
+    infoTitle.textContent = obj.title;
+    infoDescription.textContent = obj.description;
+    infoBtn.href = obj.url;
+
+    manual.classList.add('notActive');
+    info.classList.add('active');
+    // }, 300);
+    return;
   }
-});
+  manual.classList.remove('notActive');
+}
 
 async function render() {
   const request = await fetch('./API/works.json');
@@ -58,6 +60,7 @@ async function render() {
 
     item.addEventListener('click', () => {
       removeClass();
+      renderInfo(el);
       item.classList.add('active');
       list.style.transform = `rotate(${el.deg}deg)`;
     });
